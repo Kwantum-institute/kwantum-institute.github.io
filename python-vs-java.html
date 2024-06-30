@@ -5,107 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Documentation - Java vs Python</title>
     <style>
-    body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    margin: 0; /* Added to remove default margin */
-}
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            margin: 0; /* Removed default margin */
+            align-items: flex-start; /* Align items to the left */
+        }
 
-#navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; /* Changed width to fill the entire viewport */
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    overflow-y: auto;
-}
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%; /* Fill the entire viewport width */
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            overflow-y: auto;
+        }
 
-#navbar header {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-    text-align: center; /* Centered the header */
-}
+        #navbar header {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            text-align: left; /* Align header to the left */
+        }
 
-.nav-link {
-    display: inline-block; /* Change display to inline-block */
-    color: white;
-    text-decoration: none;
-    margin: 5px; /* Adjust margin */
-    padding: 5px 10px; /* Adjust padding */
-    text-align: center;
-}
+        .nav-link {
+            display: inline-block; /* Keep inline-block for layout */
+            color: white;
+            text-decoration: none;
+            margin: 5px; /* Adjust margin */
+            padding: 5px 10px; /* Adjust padding */
+            text-align: left; /* Align text to the left */
+        }
 
+        .nav-link:hover {
+            background-color: #575757;
+        }
 
-.nav-link:hover {
-    background-color: #575757;
-}
+        #main-doc {
+            margin-top: 60px; /* Adjusted margin to push the content below the navbar */
+            padding: 20px;
+            flex-grow: 1;
+        }
 
-#main-doc {
-    margin-top: 60px; /* Adjusted margin to push the content below the navbar */
-    padding: 20px;
-    flex-grow: 1;
-}
+        .main-section {
+            margin-bottom: 20px;
+        }
 
-.main-section {
-    margin-bottom: 20px;
-}
+        .main-section header {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            text-align: left; /* Align section headers to the left */
+            padding-left: 0; /* Remove any left padding */
+        }
 
-.main-section header {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
+        code {
+            display: block;
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 3px solid #333;
+        }
 
-code {
-    display: block;
-    background-color: #f4f4f4;
-    padding: 10px;
-    margin: 10px 0;
-    border-left: 3px solid #333;
-}
+        ul {
+            margin: 10px 0;
+            padding: 0;
+            list-style-type: disc;
+        }
 
-ul {
-    margin: 10px 0;
-    padding: 0;
-    list-style-type: disc;
-}
+        .toc {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align TOC items to the left */
+            padding-left: 20px; /* Add some padding to align to the content */
+            margin-bottom: 10px; /* Minimize space between TOC and first heading */
+        }
 
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
-    
-    #navbar {
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
+        .toc a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            margin: 3px 0; /* Minimize space between TOC items */
+            padding: 5px 10px;
+        }
 
-    #main-doc {
-        margin-top: 10px; /* Adjusted margin for smaller screens */
-    }
-}
-</style>
+        .toc a:hover {
+            background-color: #575757;
+            color: white;
+        }
+
+        header {
+            text-align: left; /* Align main title to the left */
+            font-size: 50px; /* Set font size to 50px */
+            margin: 20px 0;
+            padding-left: 20px; /* Add padding to align to the content */
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            #navbar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            #main-doc {
+                margin-top: 10px; /* Adjusted margin for smaller screens */
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav id="navbar">
-        <header>Java vs Python Documentation</header>
-        <a class="nav-link" onclick="window.location.href='index.html'">Home</a>
-        <a class="nav-link" href="#Hello,_World!">Hello, World!</a>
-        <a class="nav-link" href="#Variables">Variables</a>
-        <a class="nav-link" href="#Data_Types">Data Types</a>
-        <a class="nav-link" href="#If-Else_Statements">If-Else Statements</a>
-        <a class="nav-link" href="#Loops">Loops</a>
-        <a class="nav-link" href="#Classes">Classes</a>
-        <a class="nav-link" href="#Arrays">Arrays</a>
-        <a class="nav-link" href="#Algorithms">Algorithms</a>
-        <a class="nav-link" href="#Inheritance">Inheritance</a>
-        <a class="nav-link" href="#Recursion">Recursion</a>
-    </nav>
+    <header>Java vs Python Documentation</header>
+    <div class="toc">
+        <a href="#Hello,_World!">Hello, World!</a>
+        <a href="#Variables">Variables</a>
+        <a href="#Data_Types">Data Types</a>
+        <a href="#If-Else_Statements">If-Else Statements</a>
+        <a href="#Loops">Loops</a>
+        <a href="#Classes">Classes</a>
+        <a href="#Arrays">Arrays</a>
+        <a href="#Algorithms">Algorithms</a>
+        <a href="#Inheritance">Inheritance</a>
+        <a href="#Recursion">Recursion</a>
+    </div>
     
     <!-- Main Content -->
     <main id="main-doc">
