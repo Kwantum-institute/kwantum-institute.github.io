@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwantum Institute</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Navbar styles */
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000; /* Ensure navbar is above other content */
+        }
+        #navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        #navbar a:hover {
+            text-decoration: underline;
+        }
+        /* Welcome section styles */
+        #introduction-section {
+            height: 100vh; /* Height equal to viewport height */
+            background-image: url('https://storage.needpix.com/rsynced_images/space-view-of-earth-lights.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+        #introduction-section h1 {
+            font-size: 80px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        #introduction-section p {
+            font-size: 15px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        /* Projects section styles */
+        #projects {
+            padding: 50px 0;
+            background-color: #e0e0e0;
+            text-align: center;
+        }
+        #projects h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+        .project-tile {
+            display: inline-block;
+            background-color: #fff;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .project-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            /* Adjust styles for smaller screens */
+            #introduction-section h1 {
+                font-size: 60px;
+            }
+            #introduction-section p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <a href="#introduction-section">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="https://github.com/Kwantum-institute" id="profile-link">GitHub Profile</a>
+        <!-- Placeholder links -->
+        <a href="#">Link</a>
+    </nav>
+
+    <!-- Introduction Section -->
+    <section id="introduction-section">
+        <h1>Kwantum Institute</h1>
+        <p>Curate a Course for Curiosity.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Our Top Picks Of the Day</h2>
+        <div class="project-tile">
+            <h3>Project Title</h3>
+            <p>Description of the project goes here.</p>
+            <!-- Placeholder link -->
+            <a href="#">Learn More</a>
+        </div>
+        <!-- Add more project tiles as needed -->
+    </section>
+</body>
+</html>
