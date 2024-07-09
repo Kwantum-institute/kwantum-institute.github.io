@@ -7,23 +7,35 @@ on:
 
 jobs:
   deploy:
+    name: Deploy
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v1
+      - name: Set up Node
+        uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
+          cache: "npm"
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build and deploy
-        run: |
-          npm run build
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git remote add origin https://github.com/${GITHUB_REPO}.git
-          git push --force origin main:gh-pages
+      - name: Build
+        run: npm run build -- --mode=production
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: "./dist"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
