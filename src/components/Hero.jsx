@@ -1,6 +1,8 @@
 const Hero = () => {
   return (
-    <div>Content</div>
+    <div>
+      <p>Content</p>
+    </div>
   );
 };
 
