@@ -45,7 +45,8 @@ jobs:
           path: ./dist
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@github.com"
+          git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/Kwantum-institute/kwantum-institute.github.io.git
+          git push origin gh-pages
