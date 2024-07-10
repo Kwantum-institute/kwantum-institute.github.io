@@ -11,17 +11,17 @@ import "./Navbar3D.css";
 
 const Navbar3D = () => {
   return (
-    <div className="ml-10">
+    <div className="mt-20 ml-10">
       <ul className="navbar-3d">
-        <li style={{ "--i": 5 }} data-text="Home">
+        <li style={{ "--i": 5 }}>
           <a href="#">
             <span>
               <FontAwesomeIcon icon={faHouse} />
             </span>
-            Home
+            About
           </a>
         </li>
-        <li style={{ "--i": 4 }} data-text="About">
+        <li style={{ "--i": 4 }}>
           <a href="#">
             <span>
               <FontAwesomeIcon icon={faInfo} />
@@ -29,28 +29,28 @@ const Navbar3D = () => {
             About
           </a>
         </li>
-        <li style={{ "--i": 3 }} data-text="Contact">
+        <li style={{ "--i": 3 }}>
           <a href="#">
             <span>
               <FontAwesomeIcon icon={faPhone} />
             </span>
-            Contact
+            About
           </a>
         </li>
-        <li style={{ "--i": 2 }} data-text="Services">
+        <li style={{ "--i": 2 }}>
           <a href="#">
             <span>
               <FontAwesomeIcon icon={faList} />
             </span>
-            Services
+            About
           </a>
         </li>
-        <li style={{ "--i": 1 }} data-text="Portfolio">
+        <li style={{ "--i": 1 }}>
           <a href="#">
             <span>
               <FontAwesomeIcon icon={faBriefcase} />
             </span>
-            Portfolio
+            About
           </a>
         </li>
       </ul>

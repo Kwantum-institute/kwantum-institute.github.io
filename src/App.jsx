@@ -2,6 +2,7 @@ import { useState } from "react";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Navbar3D from "./components/Navbar3D";
+import background from "./assets/earth_background.jpg";
 
 function App() {
   const [count, setCount] = useState(0);
