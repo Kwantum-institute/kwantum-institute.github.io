@@ -1,18 +1,20 @@
-import { useState } from 'react'
-import Hero from "./components/Hero"
-import Navbar from "./components/Navbar"
+import { useState } from "react";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Navbar3D from "./components/Navbar3D";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div className="ml-10">
-        <Navbar />
+      <div className="flex flex-col items-center justify-center gap-20">
+        <h1 className="mt-10 text-2xl">Kwantum Institute</h1>
+        <Navbar3D />
         <Hero />
       </div>
     </>
-  )
+  );
 }
 
 export default App;
