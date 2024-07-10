@@ -12,7 +12,7 @@ import "./Navbar3D.css";
 const Navbar3D = () => {
   return (
     <div className="mt-20 ml-10">
-      <ul className="navbar-3d">
+      <ul className="lg:flex navbar-3d">
         <li style={{ "--i": 5 }}>
           <a href="#">
             <span>

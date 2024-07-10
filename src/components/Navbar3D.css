@@ -1,6 +1,5 @@
 ul {
   transform: skewY(-15deg);
-  display: flex;
 }
 ul li {
   position: relative;

@@ -11,7 +11,7 @@ function App() {
     <>
       <div className="flex flex-col items-center justify-center gap-20">
         <h1 className="mt-10 text-2xl">Kwantum Institute</h1>
-        <Navbar3D />
+        <Navbar3D className="lg:flex" />
         <Hero />
       </div>
     </>
