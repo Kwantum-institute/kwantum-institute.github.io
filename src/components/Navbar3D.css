@@ -1,18 +1,44 @@
+:root {
+  --bgcolor: #1f3161;
+}
+#title {
+  transform: skewY(-15deg);
+}
 ul {
   transform: skewY(-15deg);
 }
 ul li {
+  border: 0;
+  border-width: 0;
+  border-style: none;
+  border-color: transparent;
   position: relative;
   list-style-type: none;
   width: 200px;
   padding: 20px;
-  background: #afc7ff;
+  background: var(--bgcolor);
   z-index: calc(1 * var(--i));
   transition: 0.5s;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1) 0,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 0,
+    transparent 50%
+  );
+  background-size: 8px 8px;
 }
 ul li:hover {
-  background: #02abff;
+  background: #85a5ff;
   transform: translate(10px, 10px);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1) 0,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 0,
+    transparent 50%
+  );
+  background-size: 8px 8px;
 }
 ul li:before {
   content: "";
@@ -21,14 +47,30 @@ ul li:before {
   left: -40px;
   width: 40px;
   height: 100%;
-  background: #afc7ff;
+  background: var(--bgcolor);
   filter: brightness(0.7);
   transform-origin: right;
   transform: skewY(45deg);
   transition: 0.5s;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1) 0,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 0,
+    transparent 50%
+  );
+  background-size: 8px 8px;
 }
 ul li:hover::before {
-  background: #02abff;
+  background: #85a5ff;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1) 0,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 0,
+    transparent 50%
+  );
+  background-size: 8px 8px;
 }
 ul li::after {
   content: attr(data-text);
@@ -42,31 +84,42 @@ ul li::after {
   padding-left: 20px;
   font-weight: 600;
   font-size: 1.5em;
-
-  background: #afc7ff;
+  background: var(--bgcolor);
   filter: brightness(0.9);
   transform-origin: bottom;
   transform: skewX(45deg);
   transition: 0.5s;
   text-transform: uppercase;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1) 0,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 0,
+    transparent 50%
+  );
+  background-size: 8px 8px;
 }
 ul li:hover::after {
-  background: #02abff;
+  background: #85a5ff;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1) 0,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 0,
+    transparent 50%
+  );
+  background-size: 8px 8px;
 }
 ul li a {
   text-decoration: none;
   display: block;
   letter-spacing: 0.05em;
   transition: 0.5s;
+  color: white;
 }
 ul li a:hover {
   color: #fff;
 }
-/*
-ul li:last-child::after {
-  box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.19);
-}
-*/
 ul li a span {
   position: absolute;
   top: 0;
@@ -82,6 +135,14 @@ ul li a span {
   align-items: center;
   font-size: 1.1em;
   opacity: 0.5;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1) 0,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 0,
+    transparent 50%
+  );
+  background-size: 8px 8px;
 }
 ul li:hover a span {
   opacity: 1;

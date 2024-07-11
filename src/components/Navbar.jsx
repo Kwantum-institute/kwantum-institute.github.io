@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <nav className="mb-20 flex py-6">
-      <h1 className="text-2xl">Kwantum Institute</h1>
+      <div className="text-2xl absolute bottom-0 left-0">Kwantum Institute</div>
     </nav>
   );
 };
