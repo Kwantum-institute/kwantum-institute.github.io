@@ -24,7 +24,7 @@ const Navbar3D = () => {
           <div className="text-3d-right lg:hidden">Institute</div>
           <div className="text-3d-left hidden lg:inline">Institute</div>
         </div>
-        <ul className="">
+        <ul>
           {navLinks.map(({ text, href, index }) => (
             <li key={index} style={{ "--i": index }}>
               <a href={href}>
