@@ -3,7 +3,6 @@ import "./Navbar3D.css";
 
 const Navbar3D = () => {
   const navLinks = [
-    ,
     { text: "About", href: "#", index: 4 },
     { text: "Science", href: "#", index: 3 },
     { text: "Technology", href: "#", index: 2 },
