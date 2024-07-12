@@ -24,28 +24,28 @@ const Navbar3D = () => {
           <div className="text-3d-right lg:hidden">Institute</div>
           <div className="text-3d-left hidden lg:inline">Institute</div>
         </div>
+        <ul className="">
+          {navLinks.map(({ text, href, index }) => (
+            <li key={index} style={{ "--i": index }}>
+              <a href={href}>
+                <span>
+                  <div>{text[0]}</div>
+                </span>
+                {text}
+              </a>
+            </li>
+          ))}
+        </ul>
         <div className="absolute invisible lg:visible translate-x-[155px] translate-y-[150px] leading-[75px] text-3d-s text-6xl skew-y-[-15deg]">
           We
           <br />
-          <p className="text-yellow-100 inline">Teach</p>
+          <p className="text-[#faeed0] inline">Teach</p>
           <br />
           People
           <br />
           Science
         </div>
       </div>
-      <ul className="">
-        {navLinks.map(({ text, href, index }) => (
-          <li key={index} style={{ "--i": index }}>
-            <a href={href}>
-              <span>
-                <div>{text[0]}</div>
-              </span>
-              {text}
-            </a>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };
