@@ -14,6 +14,11 @@
   background-image: url(./assets/earth_background.jpg);
   z-index: -10;
 }
+@media (max-width: 1023px) {
+  .hidden-on-sm {
+    display: none !important;
+  }
+}
 
 @keyframes belt {
   0% {

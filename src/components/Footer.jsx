@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="p-10 w-full h-full flex flex-col bg-black justify-center items-center">
+    <div className="p-10 w-full flex flex-col bg-black justify-center items-center">
       <p className="text-white text-center">
         Kwantum Institute 2024 - All Rights Reserved.
       </p>

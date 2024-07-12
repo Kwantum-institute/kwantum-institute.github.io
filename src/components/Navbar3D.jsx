@@ -36,7 +36,7 @@ const Navbar3D = () => {
             </li>
           ))}
         </ul>
-        <div className="absolute invisible lg:visible translate-x-[155px] translate-y-[150px] leading-[75px] text-3d-s text-6xl skew-y-[-15deg]">
+        <div className="absolute hidden-on-sm translate-x-[155px] translate-y-[150px] leading-[75px] text-3d-s text-6xl skew-y-[-15deg]">
           We
           <br />
           <p className="text-[#faeed0] inline">Teach</p>
