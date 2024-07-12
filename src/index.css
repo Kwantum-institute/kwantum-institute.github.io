@@ -5,10 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: "Open Sans", serif;
-}
-
 .bg {
   animation: belt 10s linear infinite;
   transform: skewY(-15deg);

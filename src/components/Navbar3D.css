@@ -1,8 +1,8 @@
 :root {
   --nav-color: #ffffff;
-  --nav-hover-color: rgba(59, 131, 246, 0.955);
+  --nav-hover-color: #bfdbfe;
   --text-3d-color: #ffffff;
-  --3d-effect-color: #cccccc;
+  --3d-effect-color: #000000;
   --skew-degree: -15deg;
 }
 .mirror {
