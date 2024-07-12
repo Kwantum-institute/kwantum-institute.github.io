@@ -3,21 +3,21 @@ import "./Navbar3D.css";
 
 const Navbar3D = () => {
   return (
-    <div className="mt-150px lg:mt-[400px] mb-[250px] lg:ml-10 flex flex-col items-center justify-center gap-20">
-      <div className="relative">
-        <h1 className="lg:hidden text-center mb-20">Kwantum Institute</h1>
-        <div className="lg:-left-3 text-xl lg:text-[150px] lg:leading-[150px] absolute lg:bottom-[100px] text-3d">
+    <div className="mt-[250px] lg:mt-[450px] mb-[100px] lg:mb-[200px] lg:ml-0 flex flex-col items-center justify-center gap-20">
+      <div className="relative lg:left-[100px]">
+        <div className="absolute bottom-[370px] -left-[55px] text-center lg:text-left lg:-left-3 text-6xl lg:text-[150px] lg:leading-[150px] lg:bottom-[100px] text-3d">
           Kwantum Institute
         </div>
-        <div className="lg:-left-[250px] text-xl lg:text-[40px] lg:leading-[50px] absolute lg:bottom-[0px] text-3d-s">
-          We aim <br />
-          to educate <br />
+        <div className="hidden lg:inline lg:-left-[250px] lg:-bottom-[60px] text-xl lg:text-[40px] lg:leading-[50px] absolute text-3d-s">
+          We
+          <br />
+          educate <br />
           others on <br />
           various <br />
           scientific <br />
-          topics.
+          disciplines
         </div>
-        <ul className="flex flex-col lg:flex-row navbar-3d items-center justify-center">
+        <ul className="flex flex-col relative left-3 lg:flex-row navbar-3d items-center justify-center">
           <li style={{ "--i": 5 }}>
             <a href="#">
               <span>
