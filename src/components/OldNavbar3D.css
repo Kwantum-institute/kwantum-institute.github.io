@@ -1,18 +1,13 @@
 :root {
-  --nav-color: #ffffff;
-  --nav-hover-color: rgba(59, 131, 246, 0.955);
-  --text-3d-color: #ffffff;
-  --3d-effect-color: #cccccc;
+  --bgcolor: #1f3161;
+  --3d-effect-color: #85a5ff;
   --skew-degree: -15deg;
 }
-.mirror {
-  transform: scale(-1, -1);
-}
-.text-3d-left {
+.text-3d {
   transform: skewY(var(--skew-degree));
   font-weight: 900;
   display: block;
-  color: var(--text-3d-color);
+  color: #1f3161;
   text-shadow: -1px -1px 0 var(--3d-effect-color),
     -2px -2px 0 var(--3d-effect-color), -3px -3px 0 var(--3d-effect-color),
     -4px -4px 0 var(--3d-effect-color), -5px -5px 0 var(--3d-effect-color),
@@ -20,50 +15,26 @@
     -8px -8px 0 var(--3d-effect-color), -9px -9px 0 var(--3d-effect-color),
     -10px -10px 0 var(--3d-effect-color), -11px -11px 0 var(--3d-effect-color),
     -12px -12px 0 var(--3d-effect-color), -13px -13px 0 var(--3d-effect-color),
-    -14px -14px 0 var(--3d-effect-color), -15px -15px 0 var(--3d-effect-color),
-    -16px -16px 0 var(--3d-effect-color), -17px -17px 0 var(--3d-effect-color),
-    -18px -18px 0 var(--3d-effect-color), -19px -19px 0 var(--3d-effect-color),
-    -20px -20px 0 var(--3d-effect-color);
-  transition: all 0.1s;
-}
-.text-3d-right {
-  transform: skewY(calc(var(--skew-degree) * -1));
-  font-weight: 900;
-  display: block;
-  color: var(--text-3d-color);
-  text-shadow: -1px -1px 0 var(--3d-effect-color),
-    2px -2px 0 var(--3d-effect-color), 3px -3px 0 var(--3d-effect-color),
-    4px -4px 0 var(--3d-effect-color), 5px -5px 0 var(--3d-effect-color),
-    6px -6px 0 var(--3d-effect-color), 7px -7px 0 var(--3d-effect-color),
-    8px -8px 0 var(--3d-effect-color), 9px -9px 0 var(--3d-effect-color),
-    10px -10px 0 var(--3d-effect-color), 11px -11px 0 var(--3d-effect-color),
-    12px -12px 0 var(--3d-effect-color), 13px -13px 0 var(--3d-effect-color),
-    14px -14px 0 var(--3d-effect-color), 15px -15px 0 var(--3d-effect-color),
-    16px -16px 0 var(--3d-effect-color), 17px -17px 0 var(--3d-effect-color),
-    18px -18px 0 var(--3d-effect-color), 19px -19px 0 var(--3d-effect-color),
-    20px -20px 0 var(--3d-effect-color);
+    -14px -14px 0 var(--3d-effect-color);
   transition: all 0.1s;
 }
 .text-3d-s {
   transform: skewY(var(--skew-degree));
   font-weight: 900;
   display: block;
-  color: var(--text-3d-color);
-  text-shadow: -1px -1px 0 var(--3d-effect-color),
+  color: #1f3161;
+  text-shadow: -1px -1px 0 (var(--3d-effect-color) * -1),
     -2px -2px 0 var(--3d-effect-color), -3px -3px 0 var(--3d-effect-color),
     -4px -4px 0 var(--3d-effect-color), -5px -5px 0 var(--3d-effect-color),
     -6px -6px 0 var(--3d-effect-color), -7px -7px 0 var(--3d-effect-color),
     -8px -8px 0 var(--3d-effect-color);
   transition: all 0.1s;
 }
-ul {
-  transform: skewY(calc(var(--skew-degree) * -1)) translateX(-20px);
+#title {
+  transform: skewY(var(--skew-degree));
 }
-@media (min-width: 1024px) {
-  ul {
-    transform: skewY(calc(var(--skew-degree) * -1)) translateX(-125px)
-      translateY(50px);
-  }
+ul {
+  transform: skewY(var(--skew-degree));
 }
 ul li {
   border: 0;
@@ -74,7 +45,7 @@ ul li {
   list-style-type: none;
   width: 200px;
   padding: 20px;
-  background: var(--nav-color);
+  background: var(--bgcolor);
   z-index: calc(1 * var(--i));
   transition: 0.5s;
   background-image: repeating-linear-gradient(
@@ -87,21 +58,28 @@ ul li {
   background-size: 8px 8px;
 }
 ul li:hover {
-  background: var(--nav-hover-color);
-  transform: translate(-10px, 10px);
+  background: #85a5ff;
+  transform: translate(10px, 10px);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1) 0,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 0,
+    transparent 50%
+  );
   background-size: 8px 8px;
 }
 ul li:before {
   content: "";
   position: absolute;
-  top: -40px;
-  right: -40px;
+  top: 0;
+  left: -40px;
   width: 40px;
   height: 100%;
-  background: var(--nav-color);
+  background: var(--bgcolor);
   filter: brightness(0.7);
   transform-origin: right;
-  transform: skewY(-45deg);
+  transform: skewY(45deg);
   transition: 0.5s;
   background-image: repeating-linear-gradient(
     45deg,
@@ -113,7 +91,7 @@ ul li:before {
   background-size: 8px 8px;
 }
 ul li:hover::before {
-  background: var(--nav-hover-color);
+  background: #85a5ff;
   background-image: repeating-linear-gradient(
     45deg,
     rgba(0, 0, 0, 0.1) 0,
@@ -127,7 +105,7 @@ ul li::after {
   content: attr(data-text);
   position: absolute;
   top: -40px;
-  right: 0;
+  left: 0;
   width: calc(100%);
   height: 40px;
   display: flex;
@@ -135,10 +113,10 @@ ul li::after {
   padding-left: 20px;
   font-weight: 600;
   font-size: 1.5em;
-  background: var(--nav-color);
+  background: var(--bgcolor);
   filter: brightness(0.9);
   transform-origin: bottom;
-  transform: skewX(-45deg);
+  transform: skewX(45deg);
   transition: 0.5s;
   text-transform: uppercase;
   background-image: repeating-linear-gradient(
@@ -151,7 +129,7 @@ ul li::after {
   background-size: 8px 8px;
 }
 ul li:hover::after {
-  background: var(--nav-hover-color);
+  background: #85a5ff;
   background-image: repeating-linear-gradient(
     45deg,
     rgba(0, 0, 0, 0.1) 0,
@@ -166,20 +144,20 @@ ul li a {
   display: block;
   letter-spacing: 0.05em;
   transition: 0.5s;
-  color: rgb(0, 0, 0);
+  color: white;
 }
 ul li a:hover {
   color: #fff;
 }
 ul li a span {
   position: absolute;
-  top: -40px;
-  right: -40px;
+  top: 0;
+  left: -40px;
   width: 40px;
   text-align: center;
   height: 100%;
   transform-origin: right;
-  transform: skewY(-45deg);
+  transform: skewY(45deg);
   transition: 0.5s;
   display: flex;
   justify-content: center;
