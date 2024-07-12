@@ -3,7 +3,7 @@ import "./Navbar3D.css";
 
 const Navbar3D = () => {
   return (
-    <div className="mt-[250px] lg:mt-[450px] mb-[100px] lg:mb-[200px] lg:ml-0 flex flex-col items-center justify-center gap-20">
+    <div className="mt-[250px] lg:mt-[420px] mb-[100px] lg:mb-[200px] lg:ml-0 flex flex-col items-center justify-center gap-20">
       <div className="relative lg:left-[100px]">
         <div className="absolute bottom-[370px] -left-[55px] text-center lg:text-left lg:-left-3 text-6xl lg:text-[150px] lg:leading-[150px] lg:bottom-[100px] text-3d">
           Kwantum Institute
