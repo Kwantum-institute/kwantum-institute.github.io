@@ -16,10 +16,10 @@ const Layout = () => {
             <h1 className="inline"> Institute</h1>
           </Link>
           <ul className="flex flex-row gap-4 text-white">
-            <li>
+            <li className="text-gray-400">
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className="text-gray-400">
               <Link to="/about">About</Link>
             </li>
             <li>
