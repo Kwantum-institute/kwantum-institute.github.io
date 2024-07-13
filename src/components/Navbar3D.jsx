@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 const Navbar3D = () => {
   const navLinks = [
-    { text: "Educational Blogs", href: "/science", index: 3 },
-    { text: "Nutshell Knowledge", href: "/technology", index: 2 },
-    { text: "Historical Science", href: "/history", index: 1 },
+    { text: "Educational Blogs", to: "/blogs", index: 3 },
+    { text: "Nutshell Knowledge", to: "/nutshell", index: 2 },
+    { text: "Historical Science", to: "/science", index: 1 },
   ];
 
   return (
@@ -28,13 +28,13 @@ const Navbar3D = () => {
           <div className="text-3d-left hidden lg:inline">Institute</div>
         </Link>
         <ul className="navbar-3d">
-          {navLinks.map(({ text, href, index }) => (
+          {navLinks.map(({ text, to, index }) => (
             <li key={index} style={{ "--i": index }}>
-              <a href={href}>
+              <Link to={to}>
                 <span>
                   <div>{text}</div>
                 </span>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
