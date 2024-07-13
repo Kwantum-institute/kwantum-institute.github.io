@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const Navbar3D = () => {
   const navLinks = [
     { text: "About", href: "/about", index: 4 },
-    { text: "Science", href: "/science", index: 3 },
-    { text: "Technology", href: "/technology", index: 2 },
-    { text: "Theory", href: "/theory", index: 1 },
+    { text: "Educational Blogs", href: "/science", index: 3 },
+    { text: "Nutshell Knowledge", href: "/technology", index: 2 },
+    { text: "History Celebration", href: "/theory", index: 1 },
   ];
 
   return (
