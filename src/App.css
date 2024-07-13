@@ -35,3 +35,32 @@
     background-position: 100% 0;
   }
 }
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  column-gap: 0.5rem;
+}
+.blog div {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+}
+
+.blog a {
+  font-size: 2rem;
+  color: lightblue;
+  text-decoration: underline;
+  font-weight: 900;
+  display: block;
+  text-shadow: -1px -1px 0 var(--3d-effect-color),
+    -2px -2px 0 var(--3d-effect-color), -3px -3px 0 var(--3d-effect-color),
+    -4px -4px 0 var(--3d-effect-color), -5px -5px 0 var(--3d-effect-color),
+    -6px -6px 0 var(--3d-effect-color), -7px -7px 0 var(--3d-effect-color),
+    -8px -8px 0 var(--3d-effect-color);
+  transition: all 0.1s;
+}
+
+.blog p {
+  color: white;
+}
