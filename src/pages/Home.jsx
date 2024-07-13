@@ -1,6 +1,5 @@
 import Navbar3D from "../components/Navbar3D";
 import Hero from "../components/Hero";
-import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -8,7 +7,6 @@ function Home() {
       <div className="bg"></div>
       <Navbar3D />
       <Hero />
-      <Footer />
     </div>
   );
 }

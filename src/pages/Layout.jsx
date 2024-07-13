@@ -1,6 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 
 const Layout = () => {
   const location = useLocation();
@@ -43,6 +44,7 @@ const Layout = () => {
         </nav>
       )}
       <Outlet />
+      <Footer />
     </>
   );
 };
