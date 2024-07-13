@@ -1,18 +1,22 @@
 import React from "react";
 import "./Navbar3D.css";
+import { Link } from "react-router-dom";
 
 const Navbar3D = () => {
   const navLinks = [
-    { text: "About", href: "#", index: 4 },
-    { text: "Science", href: "#", index: 3 },
-    { text: "Technology", href: "#", index: 2 },
-    { text: "Theory", href: "#", index: 1 },
+    { text: "About", href: "/about", index: 4 },
+    { text: "Science", href: "/science", index: 3 },
+    { text: "Technology", href: "/technology", index: 2 },
+    { text: "Theory", href: "/theory", index: 1 },
   ];
 
   return (
     <div className="h-[700px] flex flex-col relative justify-center items-center">
       <div className="w-2/3 flex flex-col items-center">
-        <div className="relative gap-5 flex flex-col lg:flex-row mb-20 text-6xl lg:text-8xl text-center">
+        <Link
+          to="/"
+          className="relative gap-5 flex flex-col lg:flex-row mb-20 text-6xl lg:text-8xl text-center"
+        >
           <div className="text-3d-right lg:hidden">
             <h1 className="text-[#faeed0] inline">Kwan</h1>
             <h1 className="text-blue-200 inline">tum</h1>
@@ -23,15 +27,14 @@ const Navbar3D = () => {
           </div>
           <div className="text-3d-right lg:hidden">Institute</div>
           <div className="text-3d-left hidden lg:inline">Institute</div>
-        </div>
-        <ul>
+        </Link>
+        <ul className="navbar-3d">
           {navLinks.map(({ text, href, index }) => (
             <li key={index} style={{ "--i": index }}>
               <a href={href}>
                 <span>
-                  <div>{text[0]}</div>
+                  <div>{text}</div>
                 </span>
-                {text}
               </a>
             </li>
           ))}

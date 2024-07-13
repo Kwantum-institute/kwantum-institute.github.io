@@ -56,16 +56,16 @@
     -8px -8px 0 var(--3d-effect-color);
   transition: all 0.1s;
 }
-ul {
+.navbar-3d {
   transform: skewY(calc(var(--skew-degree) * -1)) translateX(-20px);
 }
 @media (min-width: 1024px) {
-  ul {
+  .navbar-3d {
     transform: skewY(calc(var(--skew-degree) * -1)) translateX(-125px)
       translateY(50px);
   }
 }
-ul li {
+.navbar-3d li {
   border: 0;
   border-width: 0;
   border-style: none;
@@ -86,12 +86,12 @@ ul li {
   );
   background-size: 8px 8px;
 }
-ul li:hover {
+.navbar-3d li:hover {
   background: var(--nav-hover-color);
   transform: translate(-10px, 10px);
   background-size: 8px 8px;
 }
-ul li:before {
+.navbar-3d li:before {
   content: "";
   position: absolute;
   top: -40px;
@@ -112,7 +112,7 @@ ul li:before {
   );
   background-size: 8px 8px;
 }
-ul li:hover::before {
+.navbar-3d li:hover::before {
   background: var(--nav-hover-color);
   background-image: repeating-linear-gradient(
     45deg,
@@ -123,7 +123,7 @@ ul li:hover::before {
   );
   background-size: 8px 8px;
 }
-ul li::after {
+.navbar-3d li::after {
   content: attr(data-text);
   position: absolute;
   top: -40px;
@@ -150,7 +150,7 @@ ul li::after {
   );
   background-size: 8px 8px;
 }
-ul li:hover::after {
+.navbar-3d li:hover::after {
   background: var(--nav-hover-color);
   background-image: repeating-linear-gradient(
     45deg,
@@ -161,17 +161,17 @@ ul li:hover::after {
   );
   background-size: 8px 8px;
 }
-ul li a {
+.navbar-3d li Link {
   text-decoration: none;
   display: block;
   letter-spacing: 0.05em;
   transition: 0.5s;
   color: rgb(0, 0, 0);
 }
-ul li a:hover {
+.navbar-3d li Link:hover {
   color: #00469d;
 }
-ul li a span {
+.navbar-3d li Link span {
   position: absolute;
   top: -40px;
   right: -40px;
@@ -195,6 +195,6 @@ ul li a span {
   );
   background-size: 8px 8px;
 }
-ul li:hover a span {
+.navbar-3d li:hover Link span {
   opacity: 1;
 }
