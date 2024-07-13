@@ -7,12 +7,12 @@ const Navbar3D = () => {
     { text: "About", href: "/about", index: 4 },
     { text: "Educational Blogs", href: "/science", index: 3 },
     { text: "Nutshell Knowledge", href: "/technology", index: 2 },
-    { text: "History Celebration", href: "/theory", index: 1 },
+    { text: "Historical Science", href: "/history", index: 1 },
   ];
 
   return (
-    <div className="h-[700px] flex flex-col relative justify-center items-center">
-      <div className="w-2/3 flex flex-col items-center">
+    <div className="h-[600px] lg:h-[700px] mt-[145px] lg:mt-5 w-full flex flex-col relative justify-center items-center">
+      <div className="relative lg:right-5 w-2/3 flex flex-col items-center">
         <Link
           to="/"
           className="relative gap-5 flex flex-col lg:flex-row mb-20 text-6xl lg:text-8xl text-center"

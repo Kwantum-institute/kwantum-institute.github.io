@@ -1,5 +1,5 @@
 :root {
-  --nav-color: #ffffff;
+  --nav-color: #4a4a4a;
   --nav-hover-color: #bfdbfed4;
   --text-3d-color: #ffffff;
   --3d-effect-color: #000000;
@@ -61,29 +61,24 @@
 }
 @media (min-width: 1024px) {
   .navbar-3d {
-    transform: skewY(calc(var(--skew-degree) * -1)) translateX(-125px)
+    transform: skewY(calc(var(--skew-degree) * -1)) translateX(-135px)
       translateY(50px);
   }
 }
 .navbar-3d li {
+  font-weight: 900;
+  color: white;
   border: 0;
   border-width: 0;
   border-style: none;
   border-color: transparent;
   position: relative;
   list-style-type: none;
-  width: 200px;
+  width: 210px;
   padding: 20px;
   background: var(--nav-color);
   z-index: calc(1 * var(--i));
   transition: 0.5s;
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.1) 0,
-    rgba(0, 0, 0, 0.1) 1px,
-    transparent 0,
-    transparent 50%
-  );
   background-size: 8px 8px;
 }
 .navbar-3d li:hover {
@@ -103,25 +98,9 @@
   transform-origin: right;
   transform: skewY(-45deg);
   transition: 0.5s;
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.1) 0,
-    rgba(0, 0, 0, 0.1) 1px,
-    transparent 0,
-    transparent 50%
-  );
-  background-size: 8px 8px;
 }
 .navbar-3d li:hover::before {
   background: var(--nav-hover-color);
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.1) 0,
-    rgba(0, 0, 0, 0.1) 1px,
-    transparent 0,
-    transparent 50%
-  );
-  background-size: 8px 8px;
 }
 .navbar-3d li::after {
   content: attr(data-text);
@@ -141,25 +120,9 @@
   transform: skewX(-45deg);
   transition: 0.5s;
   text-transform: uppercase;
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.1) 0,
-    rgba(0, 0, 0, 0.1) 1px,
-    transparent 0,
-    transparent 50%
-  );
-  background-size: 8px 8px;
 }
 .navbar-3d li:hover::after {
   background: var(--nav-hover-color);
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.1) 0,
-    rgba(0, 0, 0, 0.1) 1px,
-    transparent 0,
-    transparent 50%
-  );
-  background-size: 8px 8px;
 }
 .navbar-3d li Link {
   text-decoration: none;
@@ -186,14 +149,6 @@
   align-items: center;
   font-size: 1.1em;
   opacity: 0.5;
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.1) 0,
-    rgba(0, 0, 0, 0.1) 1px,
-    transparent 0,
-    transparent 50%
-  );
-  background-size: 8px 8px;
 }
 .navbar-3d li:hover Link span {
   opacity: 1;
