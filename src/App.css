@@ -44,23 +44,20 @@
 .blog div {
   width: 100%;
   aspect-ratio: 16/9;
-  background-color: white;
+  background-color: black;
 }
 
 .blog a {
   font-size: 2rem;
-  color: lightblue;
-  text-decoration: underline;
   font-weight: 900;
   display: block;
+  transition: all 0.1s;
+}
+
+.text-3d {
   text-shadow: -1px -1px 0 var(--3d-effect-color),
     -2px -2px 0 var(--3d-effect-color), -3px -3px 0 var(--3d-effect-color),
     -4px -4px 0 var(--3d-effect-color), -5px -5px 0 var(--3d-effect-color),
     -6px -6px 0 var(--3d-effect-color), -7px -7px 0 var(--3d-effect-color),
     -8px -8px 0 var(--3d-effect-color);
-  transition: all 0.1s;
-}
-
-.blog p {
-  color: white;
 }

@@ -6,7 +6,7 @@ const Navbar3D = () => {
   const navLinks = [
     { text: "Educational Blogs", to: "/blogs", index: 3 },
     { text: "Nutshell Knowledge", to: "/nutshell", index: 2 },
-    { text: "History Celebration", to: "/science", index: 1 },
+    { text: "History Celebration", to: "/history", index: 1 },
   ];
 
   return (
@@ -45,14 +45,14 @@ const Navbar3D = () => {
           <br />
           People
           <br />
-          Science
-          <br />
-          <div className="text-4xl">and more!</div>
+          Science{" "}
+          <p className="absolute bottom-3 left-[250px] w-full text-xl inline text-red-100">
+            and more!
+          </p>
         </div>
       </div>
     </div>
   );
-n  
 };
 
 export default Navbar3D;

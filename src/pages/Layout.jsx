@@ -1,10 +1,8 @@
 import { Outlet, Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 
 const Layout = () => {
-  const location = useLocation();
   return (
     <>
       <Banner />
@@ -29,7 +27,7 @@ const Layout = () => {
               <Link to="/nutshell">Nutshell Knowledge</Link>
             </li>
             <li>
-              <Link to="/history">Historical Science</Link>
+              <Link to="/history">History Celebration</Link>
             </li>
           </ul>
         </div>
