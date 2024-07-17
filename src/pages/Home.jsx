@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 function Home() {
   return (
     <div className="relative flex flex-col items-center">
-      <div className="bg"></div>
+      <div className="bg bg-black"></div>
       <Navbar3D />
       <Hero />
     </div>
