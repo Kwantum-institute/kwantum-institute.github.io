@@ -13,7 +13,7 @@ function Nutshell() {
           </section>
           <section className="grid sm:grid-cols-2 gap-3 lg:gap-4">
             <BlogPreview
-              title="Blog"
+              title="Python vs Java: A Brief Comparison"
               description="Documentation comparing Java and Python programming languages."
               thumbnail=""
               to="python-vs-java"

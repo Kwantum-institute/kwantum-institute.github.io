@@ -1,5 +1,4 @@
 import Section from "../Section";
-import BlogPreview from "../BlogPreview";
 
 function PythonVsJava() {
   return (

@@ -20,11 +20,11 @@ function App() {
         <Route path="nutshell" element={<Nutshell/>} />
         <Route path="history" element={<History/>} />
         <Route
-          path="history/PhysicsNobelPrize"
+          path="history/physics-nobel-prize"
           element={<PhysicsNobelPrize/>}
         />
         <Route
-          path="nutshell/PythonVsJava"
+          path="nutshell/python-vs-java"
           element={<PythonVsJava/>}
         />
         <Route path="*" element={<NoPage />} />
