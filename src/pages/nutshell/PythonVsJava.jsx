@@ -7,18 +7,6 @@ function PythonVsJava() {
       content={
         <>
           <header className="header">Java vs Python Documentation</header>
-          <div className="toc">
-            <a href="#Hello,_World!" className="nav-link">Hello, World!</a>
-            <a href="#Variables" className="nav-link">Variables</a>
-            <a href="#Data_Types" className="nav-link">Data Types</a>
-            <a href="#If-Else_Statements" className="nav-link">If-Else Statements</a>
-            <a href="#Loops" className="nav-link">Loops</a>
-            <a href="#Classes" className="nav-link">Classes</a>
-            <a href="#Arrays" className="nav-link">Arrays</a>
-            <a href="#Algorithms" className="nav-link">Algorithms</a>
-            <a href="#Inheritance" className="nav-link">Inheritance</a>
-            <a href="#Recursion" className="nav-link">Recursion</a>
-          </div>
           <main className="main-doc" id="main-doc">
             <section className="main-section" id="Hello,_World!">
               <header className="section-header">Hello, World!</header>
