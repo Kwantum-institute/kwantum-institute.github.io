@@ -41,11 +41,11 @@ const Navbar3D = () => {
         <div className="absolute hidden-on-sm translate-x-[155px] translate-y-[150px] leading-[75px] text-3d-s text-6xl skew-y-[-15deg]">
           We
           <br />
-          <p className="text-[#faeed0] inline">Teach</p>
+          <p className="text-[#faeed0] inline">Write</p>
           <br />
-          People
+          About
           <br />
-          Science{" "}
+          <p className="text-blue-200 inline">Science</p>
           <p className="absolute bottom-3 left-[250px] w-full text-xl inline text-red-100">
             and more!
           </p>
