@@ -6,21 +6,26 @@ import Blogs from "./pages/blogs/Blogs";
 import Nutshell from "./pages/nutshell/Nutshell";
 import History from "./pages/history/History";
 import PhysicsNobelPrize from "./pages/history/PhysicsNobelPrize";
+import PythonVsJava from "./pages/nutshell/PythonVsJava";
 import NoPage from "./pages/NoPage";
 import "./App.css";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="blogs" element={<Blogs />} />
-        <Route path="nutshell" element={<Nutshell />} />
-        <Route path="history" element={<History />} />
+      <Route path="/" element={<Layout/>}>
+        <Route index element={<Home/>} />
+        <Route path="about" element={<About/>} />
+        <Route path="blogs" element={<Blogs/>} />
+        <Route path="nutshell" element={<Nutshell/>} />
+        <Route path="history" element={<History/>} />
         <Route
-          path="history/physics-nobel-prize"
-          element={<PhysicsNobelPrize />}
+          path="history/PhysicsNobelPrize"
+          element={<PhysicsNobelPrize/>}
+        />
+        <Route
+          path="nutshell/PythonVsJava"
+          element={<PythonVsJava/>}
         />
         <Route path="*" element={<NoPage />} />
       </Route>
