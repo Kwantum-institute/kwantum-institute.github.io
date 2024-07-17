@@ -16,7 +16,7 @@ function Nutshell() {
               title="Blog"
               description="Documentation comparing Java and Python programming languages."
               thumbnail=""
-              to=""
+              to="python-vs-java"
             />
             <BlogPreview
               title="Blog"
