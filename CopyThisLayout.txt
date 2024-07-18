@@ -1,15 +1,16 @@
-import Section from "../Section";
+import Article from "../Article";
 
 function Name() {
   return (
-    <Section
-      title="About"
+    <Article
+      topic="History Celebration"
+      title="Title"
+      subtitle="Subtitle"
+      name="John Appleseed"
+      date="1/1/2000"
       content={
         <>
-          <section>
-            <h1 className="text-3xl font-black">Heading</h1>
-            <p>Text</p>
-          </section>
+          <p>Your content here...</p>
         </>
       }
     />

@@ -12,6 +12,7 @@ function Editor() {
   });
   const [isReset, setIsReset] = useState(false);
   const [articleTitle, setArticleTitle] = useState("");
+  const [articleSubtitle, setArticleSubtitle] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
   const [writerName, setWriterName] = useState("");
   const [writerEmail, setWriterEmail] = useState("");
@@ -36,6 +37,7 @@ function Editor() {
   }, [
     value,
     articleTitle,
+    articleSubtitle,
     selectedTopic,
     writerName,
     writerEmail,
@@ -45,12 +47,14 @@ function Editor() {
   const loadInitialData = () => {
     const savedValue = localStorage.getItem("editorValue");
     const savedTitle = localStorage.getItem("articleTitle");
+    const savedSubtitle = localStorage.getItem("articleSubtitle");
     const savedTopic = localStorage.getItem("selectedTopic");
     const savedWriterName = localStorage.getItem("writerName");
     const savedWriterEmail = localStorage.getItem("writerEmail");
 
     if (savedValue) setValue(savedValue);
     if (savedTitle) setArticleTitle(savedTitle);
+    if (savedSubtitle) setArticleSubtitle(savedTitle);
     if (savedTopic) setSelectedTopic(savedTopic);
     if (savedWriterName) setWriterName(savedWriterName);
     if (savedWriterEmail) setWriterEmail(savedWriterEmail);
@@ -60,6 +64,7 @@ function Editor() {
     if (autoSaveEnabled) {
       localStorage.setItem("editorValue", value);
       localStorage.setItem("articleTitle", articleTitle);
+      localStorage.setItem("articleSubtitle", articleSubtitle);
       localStorage.setItem("selectedTopic", selectedTopic);
       localStorage.setItem("writerName", writerName);
       localStorage.setItem("writerEmail", writerEmail);
@@ -77,6 +82,7 @@ function Editor() {
   const handleReset = () => {
     setValue("");
     setArticleTitle("");
+    setArticleSubtitle("");
     setSelectedTopic("");
     setWriterName("");
     setWriterEmail("");
@@ -86,6 +92,7 @@ function Editor() {
   const handleSave = () => {
     localStorage.setItem("editorValue", value);
     localStorage.setItem("articleTitle", articleTitle);
+    localStorage.setItem("articleSubtitle", articleSubtitle);
     localStorage.setItem("selectedTopic", selectedTopic);
     localStorage.setItem("writerName", writerName);
     localStorage.setItem("writerEmail", writerEmail);
@@ -160,7 +167,14 @@ function Editor() {
             placeholder="Article Title"
             value={articleTitle}
             onChange={(e) => setArticleTitle(e.target.value)}
-            className="article-title w-full px-4 py-2 border border-gray-300 focus:outline-none text-7xl font-black"
+            className="article-title w-full px-4 py-2 border border-b-0 border-gray-300 focus:outline-none text-7xl font-black"
+          />
+          <input
+            type="text"
+            placeholder="Article Subtitle"
+            value={articleSubtitle}
+            onChange={(e) => setArticleSubtitle(e.target.value)}
+            className="text-3xl text-gray-500 w-full px-4 py-2 border border-gray-300 focus:outline-none"
           />
           <div className="flex">
             <input
