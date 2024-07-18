@@ -1,9 +1,13 @@
-import Section from "../Section";
+import Article from "../Article";
 
 function PhysicsNobelPrize() {
   return (
-    <Section
+    <Article
+      topic="History Celebration"
       title="Physics Nobel Prize"
+      name="Tommy"
+      date="12/4/2003"
+      subtitle="Hello"
       content={
         <>
           <p>Your content here...</p>

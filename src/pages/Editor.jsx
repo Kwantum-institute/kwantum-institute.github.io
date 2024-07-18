@@ -96,7 +96,7 @@ function Editor() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full min-h-screen">
+    <div className="my-[200px] flex flex-col items-center justify-center w-full">
       <p className="absolute w-full top-[120px] text-red-500 text-center">
         The publish button will not work for now, until we have implemented
         backend functionality.
