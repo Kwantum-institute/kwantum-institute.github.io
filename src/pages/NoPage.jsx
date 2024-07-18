@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function NoPage() {
   return (
-    <div className="flex flex-col my-[15%] items-center justify-center w-full">
+    <div className="h-screen flex flex-col items-center justify-center w-full">
       <div className="flex flex-col w-3/4 lg:w-1/2 gap-7">
         <h1 className="text-6xl font-black">Page not found!</h1>
         <p>
