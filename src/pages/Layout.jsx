@@ -31,10 +31,12 @@ const Layout = () => {
             </li>
           </ul>
         </div>
-        <div className="flex text-white items-center gap-5">
-          <Link to="/login">Log In</Link>
-          <Link to="/sign-up" className="px-5 py-2 rounded-full bg-blue-500">
-            Sign Up
+        <div className="flex gap-5 items-center">
+          <a href="" className="text-white">
+            Support Us
+          </a>
+          <Link to="/editor" className="px-5 py-2 rounded-full bg-[#faeed0]">
+            Create Article
           </Link>
         </div>
       </nav>
