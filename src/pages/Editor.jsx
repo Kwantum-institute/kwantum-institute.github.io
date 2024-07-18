@@ -43,8 +43,12 @@ function Editor() {
 
   return (
     <div className="flex flex-col items-center justify-center w-full min-h-full">
+      <p className="absolute w-full top-[160px] text-red-500 text-center text-3xl font-black">
+        This editor will not work for now until we have implemented the backend.
+      </p>
       <div className="flex flex-col w-1/2 gap-5">
         <h1 className="text-3xl font-black">Create Article</h1>
+
         <div className="flex items-center justify-between">
           <div className="flex gap-3">
             <label>Auto Save (Locally)</label>
