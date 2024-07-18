@@ -70,10 +70,7 @@ function Editor() {
             >
               Reset
             </button>
-            <button
-              className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full"
-              onClick={handleReset}
-            >
+            <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full">
               Submit for Review
             </button>
           </div>
