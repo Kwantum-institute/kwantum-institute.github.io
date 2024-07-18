@@ -138,7 +138,7 @@ function Editor() {
               </div>
               {!autoSaveEnabled && (
                 <button
-                  className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full"
+                  className="bg-green-100 hover:bg-green-200 text-green-500 py-2 px-4 rounded-full border border-green-500"
                   onClick={handleSave}
                 >
                   Save
