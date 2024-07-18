@@ -54,7 +54,7 @@ function Editor() {
 
     if (savedValue) setValue(savedValue);
     if (savedTitle) setArticleTitle(savedTitle);
-    if (savedSubtitle) setArticleSubtitle(savedTitle);
+    if (savedSubtitle) setArticleSubtitle(savedSubtitle);
     if (savedTopic) setSelectedTopic(savedTopic);
     if (savedWriterName) setWriterName(savedWriterName);
     if (savedWriterEmail) setWriterEmail(savedWriterEmail);
