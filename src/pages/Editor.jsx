@@ -5,7 +5,11 @@ import "./Editor.css";
 
 function Editor() {
   const [value, setValue] = useState("");
-  const [autoSaveEnabled, setAutoSaveEnabled] = useState(true);
+  const [autoSaveEnabled, setAutoSaveEnabled] = useState(() => {
+    // Check if the autosave toggle state is stored in localStorage
+    const storedAutoSaveEnabled = localStorage.getItem("autoSaveEnabled");
+    return storedAutoSaveEnabled ? JSON.parse(storedAutoSaveEnabled) : true;
+  });
   const [isReset, setIsReset] = useState(false);
   const [articleTitle, setArticleTitle] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
@@ -24,8 +28,11 @@ function Editor() {
   }, []);
 
   useEffect(() => {
-    // Save the current value to localStorage on every change, if autosave is enabled
+    // Save the current value to localStorage on every change
     saveDataToLocalStorage();
+
+    // Save the autosave toggle state to localStorage
+    localStorage.setItem("autoSaveEnabled", JSON.stringify(autoSaveEnabled));
   }, [
     value,
     articleTitle,
@@ -60,7 +67,11 @@ function Editor() {
   };
 
   const toggleAutoSave = () => {
-    setAutoSaveEnabled((prevState) => !prevState);
+    setAutoSaveEnabled((prevState) => {
+      const newState = !prevState;
+      localStorage.setItem("autoSaveEnabled", JSON.stringify(newState));
+      return newState;
+    });
   };
 
   const handleReset = () => {
@@ -70,6 +81,14 @@ function Editor() {
     setWriterName("");
     setWriterEmail("");
     setIsReset(true);
+  };
+
+  const handleSave = () => {
+    localStorage.setItem("editorValue", value);
+    localStorage.setItem("articleTitle", articleTitle);
+    localStorage.setItem("selectedTopic", selectedTopic);
+    localStorage.setItem("writerName", writerName);
+    localStorage.setItem("writerEmail", writerEmail);
   };
 
   const handleTopicChange = (e) => {
@@ -103,7 +122,7 @@ function Editor() {
             </div>
             <div className="flex gap-3 items-center">
               <label>Auto Save</label>
-              <div className="relative inline-block w-10 mr-2 align-middle select-none">
+              <div className="relative inline-block w-10 align-middle select-none">
                 <input
                   type="checkbox"
                   name="toggle"
@@ -117,6 +136,14 @@ function Editor() {
                   className="block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
                 ></label>
               </div>
+              {!autoSaveEnabled && (
+                <button
+                  className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full"
+                  onClick={handleSave}
+                >
+                  Save
+                </button>
+              )}
               <button
                 className="bg-red-100 hover:bg-red-200 py-2 px-4 rounded-full border text-red-500 border-red-500"
                 onClick={handleReset}
@@ -128,7 +155,6 @@ function Editor() {
               </button>
             </div>
           </div>
-
           <input
             type="text"
             placeholder="Article Title"
