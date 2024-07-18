@@ -1,3 +1,3 @@
 # Kwantum Institute Website
 
-Created with React and Vite
+Created React, Vite, and Django
