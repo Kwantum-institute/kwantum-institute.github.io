@@ -22,11 +22,6 @@ dist-ssr
 *.sln
 *.sw?
 
-#Environment files
-.venv
-.env
-venv
-env
 
 #Extra stuff
 output.txt
