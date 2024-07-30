@@ -4,6 +4,7 @@ import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  root: "frontend",
   plugins: [react()],
   build: {
     rollupOptions: {
