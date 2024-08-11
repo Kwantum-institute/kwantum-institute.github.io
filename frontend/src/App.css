@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  font-family: Helvetica;
+  font-family: "Helvetica Neue";
 }
 .button {
   background-color: black;
